@@ -1,0 +1,80 @@
+  <!--Завдання 1. Створити html файл з формою для додавання викладача.
+  Форма повинна містити наступні поля: Повне ім’я, стать, дата народження, email,
+  телефон, бажаний колір фону, країна, місто, коментар.-->
+
+<!DOCTYPE html>
+<html lang="en">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<head>
+  <meta charset="UTF-8">
+  <title>Task 1</title>
+</head>
+<body>
+<header>
+  <h1><i>Реєстрація для викладачів</i></h1>
+</header>
+<form>
+  <div class="myForm">
+    <h2>ПІБ</h2>
+    <label>
+      <input type="text" name="name">
+    </label>
+    <h2>Стать</h2>
+    <div class="radio">
+      <label>
+        <input type="radio" name="gender" value="male">
+        Чоловіча
+      </label>
+      <label>
+        <input type="radio" name="gender" value="female">
+        Жіноча
+      </label>
+      <label>
+        <input type="radio" name="gender" value="other">
+        Інша
+      </label>
+    </div>
+    <h2>Дата народження</h2>
+    <label>
+      <input type="date" name="birthday">
+    </label>
+    <h2>Електронна пошта</h2>
+    <label>
+      <input type="email" name="email">
+    </label>
+    <h2>Номер телефону</h2>
+    <label>
+      <input type="tel" name="phone">
+    </label>
+    <h2>Колір фону</h2>
+    <label>
+      <input type="color" name="color">
+    </label>
+    <h2>Країна</h2>
+    <label>
+      <select name="country">
+        <option value="">Оберіть країну</option>
+        <option value="Ukraine">Україна</option>
+        <option value="Poland">Польща</option>
+      </select>
+    </label>
+    <h2>Місто</h2>
+    <label>
+      <select name="city">
+        <option value="">Оберіть місто</option>
+        <option value="Donetsk">ДОНЕЦЬК!</option>
+        <option value="Kyiv">Київ</option>
+        <option value="Kharkiv">Харків</option>
+      </select>
+    </label>
+    <h2>Коментар</h2>
+    <label>
+      <textarea name="comment"></textarea>
+    </label>
+    <br>
+    <br>
+    <button type="submit">Відправити заявку!</button>
+  </div>
+</form>
+</body>
+</html>
