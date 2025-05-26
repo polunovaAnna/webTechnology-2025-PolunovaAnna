@@ -10,40 +10,45 @@
 <head>
   <meta charset="UTF-8">
   <title>Task 3</title>
+  <style>
+    .MyArticle {
+      font-size: 20px;
+    }
+  </style>
 </head>
 <body>
-  <article data-bgcolor="#DDDDDD">
-    <header>
-      <h1><i>Картка викладача</i></h1>
-    </header>
-    <section>
+  <main>
+    <article data-bgcolor="#FFF1D5">
+      <header>
+        <h1><i>Картка викладача</i></h1>
+      </header>
       <picture>
         <source media="(min-width: 650px)" srcset="img/computerCat.jpg">
         <img src="img/mobileCat.jpg" width="250" height="270" alt="Silly sleepy cat">
       </picture>
-      <h2><b>ПІБ</b></h2>
-      <p style="font-size: 20px">Яквастамович Ярослав Батькович</p>
-      <h2><b>Стать</b></h2>
-      <p style="font-size: 20px">Чоловік</p>
-      <h2><b>Електронна адреса</b></h2>
-      <p style="font-size: 20px">idkwhattowrite13@gmail.com</p>
-      <h2><b>Номер телефону</b></h2>
-      <p style="font-size: 20px">+380548765005</p>
-      <h2><b>Країна</b></h2>
-      <p style="font-size: 20px">Україна</p>
-      <h2><b>Місто</b></h2>
-      <p style="font-size: 20px">м.Київ</p>
-      <h2><b>Коментар</b></h2>
-      <p style="font-size: 20px">Я люблю свою роботу, я прийду сюди в суботу :)</p>
-    </section>
-    <footer>
-      <iframe
-        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2539.7578377428267!2d30.517730076716983!3d50.46423397159484!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40d4ce405e36e91f%3A0x8e8077eac832bfe6!2zMS3QuSDQutC-0YDQv9GD0YEg0J3QsNCj0JrQnNCQ!5e0!3m2!1suk!2sua!4v1747926593934!5m2!1suk!2sua"
-        width="600"
-        height="450"
-        title="Map of the workplace">
-      </iframe>
-    </footer>
-  </article>
+      <label for="fullName"><b>ПІБ</b></label>
+      <p id="fullName">Яквастамович Ярослав Батькович</p>
+      <label for="gender"><b>Стать</b></label>
+      <p id="gender">Чоловік</p>
+      <label for="gmail"><b>Електронна адреса</b></label>
+      <p id="gmail">idkwhattowrite13@gmail.com</p>
+      <label for="phoneNumber"><b>Номер телефону</b></label>
+      <p id="phoneNumber">+380548765005</p>
+      <label for="homeCountry"><b>Країна</b></label>
+      <p id="homeCountry">Україна</p>
+      <label for="homeTown"><b>Місто</b></label>
+      <p id="homeTown">Київ</p>
+      <label for="comment"><b>Коментар</b></label>
+      <p id="comment">Я люблю свою роботу, я прийду сюди в суботу :)</p>
+      <footer>
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2539.7578377428267!2d30.517730076716983!3d50.46423397159484!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40d4ce405e36e91f%3A0x8e8077eac832bfe6!2zMS3QuSDQutC-0YDQv9GD0YEg0J3QsNCj0JrQnNCQ!5e0!3m2!1suk!2sua!4v1747926593934!5m2!1suk!2sua"
+          width="600"
+          height="450"
+          title="Map of the workplace">
+        </iframe>
+      </footer>
+    </article>
+  </main>
 </body>
 </html>
