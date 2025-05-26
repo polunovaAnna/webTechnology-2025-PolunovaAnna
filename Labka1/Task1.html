@@ -8,73 +8,82 @@
 <head>
   <meta charset="UTF-8">
   <title>Task 1</title>
+  <style>
+    .myForm {
+      font-size: 20px;
+    }
+  </style>
 </head>
 <body>
 <header>
   <h1><i>Реєстрація для викладачів</i></h1>
 </header>
-<form>
-  <div class="myForm">
-    <h2>ПІБ</h2>
-    <label>
-      <input type="text" name="name">
-    </label>
-    <h2>Стать</h2>
-    <div class="radio">
-      <label>
-        <input type="radio" name="gender" value="male">
-        Чоловіча
+<main>
+  <form>
+    <div class="myForm">
+      <label><b>Введіть прізвище, ім'я та по батькові</b>
+        <input type="text" name="name">
       </label>
-      <label>
-        <input type="radio" name="gender" value="female">
-        Жіноча
+      <br>
+      <br>
+      <div>
+        <p><b>Оберіть стать:</b></p>
+        <input type="radio" name="gender" id="male" value="male">
+        <label for="male">Чоловіча</label><br>
+        <input type="radio" name="gender" id="female" value="female">
+        <label for="female">Жіноча</label><br>
+        <input type="radio" name="gender" id="other" value="other">
+        <label for="other">Інша</label>
+      </div>
+      <br>
+      <br>
+      <label><b>Введіть повну дату народження</b>
+        <input type="date" name="birthday">
       </label>
-      <label>
-        <input type="radio" name="gender" value="other">
-        Інша
+      <br>
+      <br>
+      <label><b>Введіть електронну адресу</b>
+        <input type="email" name="email">
       </label>
+      <br>
+      <br>
+      <label><b>Введіть номер телефону</b>
+        <input type="tel" name="phone">
+      </label>
+      <br>
+      <br>
+      <label><b>Оберіть бажаний колір фону</b>
+        <input type="color" name="color">
+      </label>
+      <br>
+      <br>
+      <label><b>Оберіть вашу країну проживання</b>
+        <select name="country">
+          <option value="">Оберіть країну</option>
+          <option value="Ukraine">Україна</option>
+          <option value="Poland">Польща</option>
+        </select>
+      </label>
+      <br>
+      <br>
+      <label><b>Оберіть ваше місто проживання</b>
+        <select name="city">
+          <option value="">Оберіть місто</option>
+          <option value="Donetsk">ДОНЕЦЬК!</option>
+          <option value="Kyiv">Київ</option>
+          <option value="Kharkiv">Харків</option>
+        </select>
+      </label>
+      <br>
+      <br>
+      <label for="comment"><b>За бажанням, залиште коментар</b></label>
+      <br>
+      <textarea name="comment" id="comment"></textarea>
+      <br>
+      <br>
+      <button type="submit">Відправити заявку!</button>
     </div>
-    <h2>Дата народження</h2>
-    <label>
-      <input type="date" name="birthday">
-    </label>
-    <h2>Електронна пошта</h2>
-    <label>
-      <input type="email" name="email">
-    </label>
-    <h2>Номер телефону</h2>
-    <label>
-      <input type="tel" name="phone">
-    </label>
-    <h2>Колір фону</h2>
-    <label>
-      <input type="color" name="color">
-    </label>
-    <h2>Країна</h2>
-    <label>
-      <select name="country">
-        <option value="">Оберіть країну</option>
-        <option value="Ukraine">Україна</option>
-        <option value="Poland">Польща</option>
-      </select>
-    </label>
-    <h2>Місто</h2>
-    <label>
-      <select name="city">
-        <option value="">Оберіть місто</option>
-        <option value="Donetsk">ДОНЕЦЬК!</option>
-        <option value="Kyiv">Київ</option>
-        <option value="Kharkiv">Харків</option>
-      </select>
-    </label>
-    <h2>Коментар</h2>
-    <label>
-      <textarea name="comment"></textarea>
-    </label>
-    <br>
-    <br>
-    <button type="submit">Відправити заявку!</button>
-  </div>
-</form>
+  </form>
+</main>
 </body>
 </html>
