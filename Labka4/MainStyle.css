@@ -47,6 +47,11 @@ body {
     background-color: whitesmoke;
     cursor: pointer;
     height: fit-content;
+    transition: transform 0.3s;
+}
+
+.mobile-buttons button:hover {
+    transform: scale(1.02);
 }
 
 .sign-in{
@@ -107,10 +112,14 @@ input[type='checkbox']{
     height: 20px;
     border: 1px solid var(--color-dark);
     border-radius: 4px;
-    background-color: whitesmoke;
+    background-color: white;
     cursor: pointer;
     position: relative;
     transition: all 0.3s ease;
+}
+
+input[type='checkbox']:hover{
+    transform: scale(1.02);
 }
 
 input[type="checkbox"]:checked {
@@ -135,6 +144,11 @@ input[type="checkbox"]:checked::after {
     font-size: inherit;
     font-family: inherit;
     height: fit-content;
+    transition: transform 0.2s ease;
+}
+
+.author:hover{
+    transform: scale(1.02);
 }
 
 .side-panel h2,
@@ -175,11 +189,16 @@ input[type="checkbox"]:checked::after {
     background-color: whitesmoke;
     cursor: pointer;
     height: fit-content;
+    transition: transform 0.2s ease;
+}
+
+.sorting:hover{
+    transform: scale(1.02);
 }
 
 .books-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(265px, 1fr));
     gap: 30px;
     padding: 20px 0;
 }
