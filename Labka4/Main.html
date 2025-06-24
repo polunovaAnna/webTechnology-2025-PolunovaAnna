@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Сайт для відстежування прочитаних книжок">
     <link rel="stylesheet" href="MainStyle.css">
+    <script src="Logic.js" defer></script>
     <title>Book tracker</title>
 </head>
 <body>
@@ -14,116 +15,53 @@
     </div>
     <div class="wrapper">
         <div class="side-panel">
-            <h2>Filter</h2>
-            <div class="sub-side">
-                <h3>Genre</h3>
-                <label class="checkbox-label">
-                    <input type="checkbox" class="genre"> Thriller
-                </label>
-                <label class="checkbox-label">
-                    <input type="checkbox" class="genre"> Historical
-                </label>
-                <label class="checkbox-label">
-                    <input type="checkbox" class="genre"> Romance
-                </label>
-                <label class="checkbox-label">
-                    <input type="checkbox" class="genre"> Poetry
-                </label>
-                <label class="checkbox-label">
-                    <input type="checkbox" class="genre"> Classics
-                </label>
-                <label class="checkbox-label">
-                    <input type="checkbox" class="genre"> Fantasy
-                </label>
+            <h2>Фільтр</h2>
+            <div class="sub-side sub-genres">
+                <h3>Жанри</h3>
             </div>
             <div class="sub-side">
-                <h3>Author</h3>
-                <input type="text" class="author" placeholder="Enter author's name">
+                <h3>Автор</h3>
+                <input type="text" class="author" placeholder="Введіть ім'я автора">
             </div>
-            <div class="sub-side">
-                <h3>Year</h3>
-                <label class="checkbox-label">
-                    <input type="checkbox" class="year"> 1995
-                </label>
-                <label class="checkbox-label">
-                    <input type="checkbox" class="year"> 1999
-                </label>
-                <label class="checkbox-label">
-                    <input type="checkbox" class="year"> 2023
-                </label>
-                <label class="checkbox-label">
-                    <input type="checkbox" class="year"> 2024
-                </label>
-                <label class="checkbox-label">
-                    <input type="checkbox" class="year"> 2025
-                </label>
+            <div class="sub-side sub-year">
+                <h3>Рік</h3>
             </div>
-            <div class="sub-side">
-                <h3>Language</h3>
-                <label class="checkbox-label">
-                    <input type="checkbox" class="lang"> Українська
-                </label>
+            <div class="sub-side sub-language">
+                <h3>Мова</h3>
             </div>
         </div>
         <div class="main">
             <div class="main-top">
-                <h2>Books</h2>
-                <div class="mobile-buttons">
-                    <button id="filterBtn">Filter</button>
+                <h2>Книги</h2>
+                <div class="controls">
+                    <button class="show-favorites">❤︎</button>
+                    <button class="show-all hidden">↩</button>
+                    <div class="mobile-buttons">
+                        <button id="filterBtn">Фільтр</button>
+                    </div>
+                    <select class="sorting">
+                        <option selected disabled>Сортувати за:</option>
+                        <option value="none">Без сортування</option>
+                        <option value="a-z">Ім'я: за зростанням</option>
+                        <option value="z-a">Ім'я: за спаданням</option>
+                        <option value="1-9">Рік: за зростанням</option>
+                        <option value="9-1">Рік: за спаданням</option>
+                        <option value="genre-a-z">Жанр: за зростанням</option>
+                        <option value="genre-z-a">Жанр: за спаданням</option>
+                    </select>
                 </div>
-                <select class="sorting">
-                    <option selected disabled>Sort by:</option>
-                    <option value="a-z">Name: ascending</option>
-                    <option value="z-a">Name: descending</option>
-                    <option value="1-9">Year: ascending</option>
-                    <option value="9-1">Year: descending</option>
-                </select>
             </div>
-            <div class="books-grid">
-                <div class="book-card">
-                    <img src="Images\\limb-obk-2500-1.480x710.jpg" alt="Лімб. Кирило Половінко">
-                    <h3 class="book-title">Лімб</h3>
-                    <p class="book-author">by Кирило Половінко</p>
-                </div>
-                <div class="book-card">
-                    <img src="Images\\za-perekopom-ye-zemlia-1000-2.480x710.jpg" alt="За Перекопом є земля. Анастасія Левкова">
-                    <h3 class="book-title">За Перекопом є земля</h3>
-                    <p class="book-author">by Анастасія Левкова</p>
-                </div>
-                <div class="book-card">
-                    <img src="Images\\slovo-2010.480x710.jpg" alt="Слово про будинок Слово. Володимир Куліш">
-                    <h3 class="book-title">Слово про будинок "Слово"</h3>
-                    <p class="book-author">by Володимир Куліш</p>
-                </div>
-                <div class="book-card">
-                    <img src="Images\\dim-na-kraiu-svitu-obk-2500_1.480x710.jpg" alt="Дім на краю світу. Майкл Каннінґем">
-                    <h3 class="book-title">Дім на краю світу</h3>
-                    <p class="book-author">by Майкл Каннінґем</p>
-                </div>
-                <div class="book-card">
-                    <img src="Images\\prypyny-svoi-vyhadky-2500.480x710.jpg" alt="Припини свої вигадки. Філіпп Бессон">
-                    <h3 class="book-title">Припини свої вигадки</h3>
-                    <p class="book-author">by Філіпп Бессон</p>
-                </div>
-                <div class="book-card">
-                    <img src="Images\\8enqxlpew44movig8qrx2zwpvesl0ovsplk71fzq_cr-1.480x710.jpg" alt="Берестечко. Ліна Костенко">
-                    <h3 class="book-title">Берестечко</h3>
-                    <p class="book-author">by Ліна Костенко</p>
-                </div>
-                <div class="book-card">
-                    <img src="Images\\1_2713.480x710.png" alt="Великодня класика. Ярина Цимбал">
-                    <h3 class="book-title">Великодня класика</h3>
-                    <p class="book-author">by Ярина Цимбал</p>
-                </div>
-                <div class="book-card">
-                    <img src="Images\\3036.480x710.jpg" alt="Зодягну на себе ніч. Террі Пратчет">
-                    <h3 class="book-title">Зодягну на себе ніч</h3>
-                    <p class="book-author">by Террі Пратчет</p>
-                </div>
-                <div class="book-card">
-                    <img src="Images\\ya-zmishayu.480x710.jpg" alt="Я змішаю твою кров з вугіллям. Олександр Михед">
-                    <h3 class="book-title">"Я змішаю твою кров із вугіллям". Зрозуміти український Схід</h3>
-                    <p class="book-author">by Олександр Михед</p>
+            <div class="active-filters"></div>
+            <div class="books-grid"></div>
+            <div class="popup hidden">
+                <div class="popup-content">
+                    <h3 class="popup-title"></h3>
+                    <p class="popup-author"></p>
+                    <p class="popup-genre"></p>
+                    <p class="popup-year"></p>
+                    <p class="popup-lang"></p>
+                    <button class="popup-close">×</button>
+                    <button class="add-favorite">Додати до улюблених</button>
                 </div>
             </div>
         </div>
